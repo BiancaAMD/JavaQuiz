@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class JavaQuiz {
+    final static String VERDE = "\u001B[32m";
+    final static String ROJO = "\u001B[31m";
+    final static String RESET = "\u001B[0m";
+
+
     public static boolean bienabc(String opcion) {
         if (opcion.equals("A") || opcion.equals("B") || opcion.equals("C")){
             return true;
@@ -11,8 +16,10 @@ public class JavaQuiz {
 
     public static int comprobacion(String usuario, String buena) {
         if (usuario.equals(buena)){
+            System.out.println(VERDE+"¡Correcto!"+RESET);
             return 1;
         } else {
+            System.out.println(ROJO+"Incorrecto"+RESET);
             return 0;
         }
     }
@@ -46,7 +53,7 @@ public class JavaQuiz {
     } while (salir == false);
     correcta = "B";
     aciertos += comprobacion(respuesta, correcta);
-
+    System.out.println();
     do {
         System.out.println("2. El bucle que utilizamos para recorrer un array es ");
         System.out.println("A) For    B) Do-While    C) While");
@@ -55,7 +62,7 @@ public class JavaQuiz {
     } while (salir == false);
     correcta = "A";
     aciertos += comprobacion(respuesta, correcta);
-
+    System.out.println();
 
     do {
         System.out.println("3. ¿Con qué lector tenemos que hacer throws IOException? ");
@@ -82,7 +89,7 @@ public class JavaQuiz {
     } while(salir == false);
     correcta = "B";
     aciertos += comprobacion(respuesta, correcta);
-
+    System.out.println();
     // Pregunta 2 - INTEGRANTE B
     do{
         System.out.printf("%n2. En git para subirlo a githup se usa A) git add B) git commit C)git push%n");
@@ -91,7 +98,7 @@ public class JavaQuiz {
     } while(salir == false);
     correcta = "C";
     aciertos += comprobacion(respuesta, correcta);
-
+    System.out.println();
     // Pregunta 3 - INTEGRANTE B
     do{
         System.out.printf("%n3. En funciones el void hace A) Que tengas que pasele un int obligatorio B) Que no va a sacar nada C)Que va a sacar un int%n");
@@ -100,7 +107,8 @@ public class JavaQuiz {
     } while(salir == false);
     correcta = "B";
     aciertos += comprobacion(respuesta, correcta); 
- 
+    System.out.println();
+    
     // RESULTADO FINAL - INTEGRANTE B 
     System.out.printf("%nHas acertado %d/6", aciertos);
     // Cerrar Scanner
