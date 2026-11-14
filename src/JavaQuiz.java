@@ -35,12 +35,42 @@ public class JavaQuiz {
     System.out.println("========== JAVAQUIZ ==========");
     System.out.println("Concurso de preguntas sobre Java");
     System.out.println("Responde escribiendo A, B o C.");
+    System.out.println();
 
     // INICIO RONDA 1 - INTEGRANTE A
-    
+    do {
+        System.out.println("1. Las posiciones de los arrays en Java se enumeran empezando en ");
+        System.out.println("A) 1    B) 0    C) No siguen un orden");
+        respuesta = sc.nextLine();
+        salir = bienabc(respuesta);
+    } while (salir == false);
+    correcta = "B";
+    aciertos += comprobacion(respuesta, correcta);
+
+    do {
+        System.out.println("2. El bucle que utilizamos para recorrer un array es ");
+        System.out.println("A) For    B) Do-While    C) While");
+        respuesta = sc.nextLine();
+        salir = bienabc(respuesta);
+    } while (salir == false);
+    correcta = "A";
+    aciertos += comprobacion(respuesta, correcta);
+
+
+    do {
+        System.out.println("3. ¿Con qué lector tenemos que hacer throws IOException? ");
+        System.out.println("A) Scanner    B) BufferedReader    C) No hay que hacerlo ");
+        respuesta = sc.nextLine();
+        salir = bienabc(respuesta);
+    } while (salir == false);
+    correcta = "B";
+    aciertos += comprobacion(respuesta, correcta);
     
     // FIN RONDA 1 - INTEGRANTE A
- 
+    System.out.println();
+    System.out.println("FIN DE LA RONDA 1");
+    System.out.println();
+    System.out.println("¿Preparado para la siguiente?");
  
     // INICIO RONDA 2 - INTEGRANTE B
     // Pregunta 1 - INTEGRANTE B
